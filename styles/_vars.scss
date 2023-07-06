@@ -1,7 +1,17 @@
-// 主要颜色
-$primary: #0081ff;
+// 主色
+$primary: #FE4C26;
+
 // 成功颜色
-$success: #39b54a;
+$success: #59BE65;
+
+// 标题颜色
+$title: #1E1E1E;
+// 副标题颜色
+$subtitle: #1E1E1E;
+// 三级文案颜色
+$text-third-color: rgba(30, 30, 30, 0.5);
+// 四级文案颜色
+$text-fourth-color: rgba(30, 30, 30, 0.3);
 // 错误颜色
 $error: #e54d42;
 // 警告颜色
@@ -10,14 +20,13 @@ $warning: #f37b1d;
 $info: #909399;
 // 边框颜色
 $border: #ebedf0;
-// 文字颜色
-$text-color: #323233;
+
 // 文字浅色
 $text-light-color: #969799;
 // 白色
 $white: #fff;
 // 黑色
-$blank: #000;
+$blank: #1E1E1E;
 // 红色
 $red: #ee0a24;
 // 边框颜色

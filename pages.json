@@ -21,7 +21,7 @@
         {
           "path": "button/index",
           "style": {
-            "navigationBarTitleText": "cell单元格",
+            "navigationBarTitleText": "button按钮",
             "h5": {
               "titleNView": false
             }

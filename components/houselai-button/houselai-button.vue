@@ -1,7 +1,8 @@
 <template>
-	<button class="houselai-button" :class="[`houselai-button--${type}`, `houselai-button--${size}`]" :style="{ marginLeft: `${marginLeft}rpx`, marginRight: `${marginRight}rpx` }" @click="handleClick">
+	<button class="houselai-button" :class="[`${typeClass}`, `${sizeClass}`, { 'houselai-button-disabled': disabled }]"
+		:style="{ marginLeft: `${marginLeft}rpx`, marginRight: `${marginRight}rpx` }" @click="handleClick">
 		<view class="houselai-button__text flex-center-center">
-			<icon v-if="icon" class="houselai-button__icon" :style="{ backgroundImage: `url(${iconUrl})`}"/>
+			<icon v-if="icon" class="houselai-button__icon" :style="{ backgroundImage: `url(${iconUrl})`}" />
 			<slot></slot>
 		</view>
 	</button>
@@ -9,7 +10,7 @@
 
 <script>
 	export default {
-        name: 'houselai-button',
+		name: 'houselai-button',
 		props: {
 			type: {
 				type: String,
@@ -18,24 +19,20 @@
 			size: {
 				type: String,
 				default: 'normal'
-			},
-			marginLeft: {
-				type: Number,
-				default: 0
-			},
-			marginRight: {
-				type: Number,
-				default: 0
-			},
-			icon: {
-				type: Boolean,
-				default: false
-			},
-			iconUrl: {
-				type: String,
-				default: '../../static/images/add.png'
 			}
 		},
+		compute: {
+			// 按钮类型
+			typeClass() {
+				if (this.type) return `houselai-button-${this.type}`
+				else return ''
+			},
+			// 尺寸
+			sizeClass() {
+				if (this.size) return `houselai-button-${this.size}`
+				else return ''
+			},
+		}
 		methods: {
 			handleClick() {
 				// console.log(111)
@@ -45,12 +42,32 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	.houselai-button {
 		/* 	width: 168rpx;
 		height: 66rpx;
 		font-size: 28rpx; */
 		border-radius: 100rpx;
+		
+		&-default {
+			color: #1E1E1E;
+			border: 1px solid rgba(0, 0, 0, 0.3);
+		}
+		
+		&-delete {
+			color: rgba(30, 30, 30, 0.5);
+			border: 1rpx solid rgba(0, 0, 0, 0.3);
+		}
+		
+		&-main {
+			color: #FFF;
+			background: linear-gradient(273.19deg, #EB5045 10.44%, #EF8933 85.91%);
+		}
+		
+		&-confirm {
+			border: 1px solid #FE4C26;
+			color: #FE4C26
+		}
 	}
 
 	.houselai-button__text {
@@ -80,7 +97,7 @@
 		color: #FFF;
 		background: linear-gradient(273.19deg, #EB5045 10.44%, #EF8933 85.91%);
 	}
-	
+
 	.houselai-button--confirm {
 		border: 1rpx solid #FE4C26;
 		color: #FE4C26
@@ -91,7 +108,7 @@
 		height: 66rpx;
 		font-size: 28rpx;
 	}
-	
+
 	.houselai-button--middle {
 		width: 212rpx;
 		height: 78rpx;
