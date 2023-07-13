@@ -14,4 +14,7 @@
 
 <style>
 	/*每个页面公共css */
+	/* @import './styles/_vars.scss'; */
+    /* @import './styles/functions.scss'; */
+    /* @import './styles/mixin.scss'; */
 </style>

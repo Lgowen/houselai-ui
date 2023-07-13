@@ -4,7 +4,7 @@
       <view class="title">按钮类型</view>
       <view class="item">
         <view class="item-content">
-          <houselai-button @click="handleClick($event, {count: 3})">测试</houselai-button>
+          <houselai-button @click="handleClick($event, {count: 3})" button-class="test">测试</houselai-button>
         </view>
       </view>
     </view>
@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .item {
   margin: 40rpx;
   display: flex;
@@ -49,5 +49,8 @@ export default {
 }
 .item-content {
   margin: 20rpx;
+}
+.test {
+	background-color: brown;
 }
 </style>
