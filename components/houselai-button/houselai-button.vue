@@ -34,9 +34,7 @@
 		computed: {
 			// 按钮类型
 			typeClass() {
-				// console.log(this.type, 'this.type')
 				return `houselai-button--${this.type}`
-				
 			},
 			// 尺寸
 			sizeClass() {
@@ -54,7 +52,7 @@
 <style lang="scss">
 	.houselai-button {
 		border-radius: 100rpx;
-		box-sizing: border-box;
+		// box-sizing: border-box;
 		
 		&--default {
 			color: #1E1E1E;
@@ -72,14 +70,25 @@
 		}
 
 		&--confirm {
-			border: 1px solid #FE4C26;
-			color: #FE4C26
+			border: 1px solid $primary;
+			color: $primary
+		}
+		
+		&--danger {
+			background-color: #F63720;
+			color: #FFF;
 		}
 
 		&--normal {
 			width: 168rpx;
 			height: 66rpx;
 			font-size: 28rpx;
+		}
+		
+		&--mini {
+			width: 136rpx;
+			height: 64rpx;
+			font-size: 26rpx
 		}
 
 		&--middle {
@@ -98,7 +107,7 @@
 		
 		&__text {
 			width: 100%;
-			height: 100%;
+			height: inherit
 		}
 		
 		&__icon {
