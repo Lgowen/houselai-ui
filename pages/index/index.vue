@@ -28,6 +28,26 @@ export default {
             }
           ]
         },
+		{
+		  title: '业务组件',
+		  item: [
+		    {
+		      label: 'CardItem',
+		      title: '卡片项',
+		      url: '/views/cardItem/index'
+		    }
+		  ]
+		},
+		{
+		  title: '业务组件',
+		  item: [
+		    {
+		      label: 'Card',
+		      title: '卡片',
+		      url: '/views/card/index'
+		    }
+		  ]
+		},
       ]
     }
   },

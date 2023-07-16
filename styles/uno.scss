@@ -1,5 +1,32 @@
+.flex {
+	display: flex;
+}
+
 .flex-center-center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.flex-between-center {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.inline-flex-end-center {
+	display: inline-flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.single-line-text-overflow-hidden {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.background-image {
+	background-size: contain;
+	background-repeat: no-repeat;
 }

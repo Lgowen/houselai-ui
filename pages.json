@@ -26,7 +26,25 @@
               "titleNView": false
             }
           }
-        }
+        },
+		{
+		  "path": "cardItem/index",
+		  "style": {
+		    "navigationBarTitleText": "cardItem",
+		    "h5": {
+		      "titleNView": false
+		    }
+		  }
+		},
+		{
+		  "path": "card/index",
+		  "style": {
+		    "navigationBarTitleText": "card",
+		    "h5": {
+		      "titleNView": false
+		    }
+		  }
+		}
       ]
     }
   ]

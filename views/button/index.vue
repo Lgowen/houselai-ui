@@ -116,8 +116,4 @@
 	.item-content {
 		margin: 20rpx;
 	}
-
-	.test {
-		background-color: brown;
-	}
 </style>
