@@ -2,7 +2,7 @@
 	<button class="houselai-button custom-class" :class="[`${typeClass}`, `${sizeClass}`, { 'houselai-button--disabled': disabled }]"
 		 @click="handleClick">
 		<view class="houselai-button__text flex-center-center">
-			<icon v-if="icon" class="houselai-button__icon" :style="{ backgroundImage: `url(${iconUrl})`}" />
+			<houselai-icon v-if="icon" class="houselai-button__icon" :color="iconColor" :type="icon" :size="iconSize" />
 			<slot></slot>
 		</view>
 	</button>
@@ -29,7 +29,8 @@
 			size: {
 				type: String,
 				default: 'normal'
-			}
+			},
+			icon: String,
 		},
 		computed: {
 			// 按钮类型
@@ -40,6 +41,30 @@
 			sizeClass() {
 				return `houselai-button--${this.size}`
 			},
+			// 图标大小
+			iconSize() {
+			  if (this.size === 'large') {
+			    return 28
+			  } else if (this.size === '') {
+			    return 24
+			  } else if (this.size === 'small') {
+			    return 20
+			  } else {
+			    return 16
+			  }
+			},
+			// 图标颜色
+			iconColor() {
+			  if (this.type) {
+			    if (!this.plain) return '#fff'
+			    else {
+			      let item = colorList.find(item => item.type === this.type)
+			      return item && item.color
+			    }
+			  } else {
+			    return '#000'
+			  }
+			}
 		},
 		methods: {
 			handleClick() {
