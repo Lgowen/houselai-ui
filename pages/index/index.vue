@@ -24,12 +24,12 @@ export default {
             {
               label: 'Button',
               title: '按钮',
-              url: '/views/button/index'
+              url: '/example/pages/button/index'
             },
 			{
 			  label: 'SafeArea',
 			  title: '安全区域',
-			  url: '/views/safeArea/index'
+			  url: '/example/pages/safeArea/index'
 			}
           ]
         },
@@ -39,12 +39,12 @@ export default {
 		    {
 		      label: 'CardItem',
 		      title: '卡片项',
-		      url: '/views/cardItem/index'
+		      url: '/example/pages/cardItem/index'
 		    },
 			{
 			  label: 'Card',
 			  title: '卡片',
-			  url: '/views/card/index'
+			  url: '/example/pages/card/index'
 			}
 		  ]
 		},

@@ -15,7 +15,7 @@
   },
   "subPackages": [
     {
-      "root": "views",
+      "root": "example/pages",
       "pages": [
         {
           "path": "button/index",
