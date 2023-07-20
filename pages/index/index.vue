@@ -25,7 +25,12 @@ export default {
               label: 'Button',
               title: '按钮',
               url: '/views/button/index'
-            }
+            },
+			{
+			  label: 'SafeArea',
+			  title: '安全区域',
+			  url: '/views/safeArea/index'
+			}
           ]
         },
 		{
@@ -35,18 +40,17 @@ export default {
 		      label: 'CardItem',
 		      title: '卡片项',
 		      url: '/views/cardItem/index'
-		    }
+		    },
+			{
+			  label: 'Card',
+			  title: '卡片',
+			  url: '/views/card/index'
+			}
 		  ]
 		},
 		{
-		  title: '业务组件',
-		  item: [
-		    {
-		      label: 'Card',
-		      title: '卡片',
-		      url: '/views/card/index'
-		    }
-		  ]
+		  title: '功能组件',
+		  item: []
 		},
       ]
     }

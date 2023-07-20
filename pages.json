@@ -9,9 +9,8 @@
     }
   ],
   "globalStyle": {
-    "navigationBarTextStyle": "black",
     "navigationBarTitleText": "houselai-ui",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "#FFFFFF",
     "backgroundColor": "#F8F8F8"
   },
   "subPackages": [
@@ -40,6 +39,15 @@
 		  "path": "card/index",
 		  "style": {
 		    "navigationBarTitleText": "card",
+		    "h5": {
+		      "titleNView": false
+		    }
+		  }
+		},
+		{
+		  "path": "safeArea/index",
+		  "style": {
+		    "navigationBarTitleText": "safeArea",
 		    "h5": {
 		      "titleNView": false
 		    }
