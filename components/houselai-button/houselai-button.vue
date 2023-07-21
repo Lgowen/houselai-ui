@@ -1,6 +1,6 @@
 <template>
 	<button class="houselai-button custom-class" :class="[`${typeClass}`, `${sizeClass}`, { 'houselai-button--disabled': disabled }]"
-		 @click="handleClick">
+		 @click="onClick">
 		<view class="houselai-button__text flex-center-center">
 			<houselai-icon v-if="icon" class="houselai-button__icon" :color="iconColor" :type="icon" :size="iconSize" />
 			<slot></slot>
@@ -67,7 +67,7 @@
 			}
 		},
 		methods: {
-			handleClick() {
+			onClick() {
 				this.$emit('click')
 			}
 		},

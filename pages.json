@@ -52,6 +52,24 @@
 		      "titleNView": false
 		    }
 		  }
+		},
+		{
+		  "path": "textField/index",
+		  "style": {
+		    "navigationBarTitleText": "textField",
+		    "h5": {
+		      "titleNView": false
+		    }
+		  }
+		},
+		{
+		  "path": "overlay/index",
+		  "style": {
+		    "navigationBarTitleText": "overlay",
+		    "h5": {
+		      "titleNView": false
+		    }
+		  }
 		}
       ]
     }

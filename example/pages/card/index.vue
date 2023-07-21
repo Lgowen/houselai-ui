@@ -1,17 +1,17 @@
 <template>
-	<view class="container">
-		<view>
-			<view class="title">业务展示</view>
-			<view class="item">
-				<houselai-card :cardList="cardList" />
-			</view>
-		</view>
-
-	</view>
+	<houselai-safe-area>
+		<demo-block title="基础用法">
+			<houselai-card :cardList="cardList" />
+		</demo-block>
+	</houselai-safe-area>
 </template>
 
 <script>
+	import demoBlock from '../../components/demo-block.vue'
 	export default {
+		components: {
+			demoBlock
+		},
 		data() {
 			return {
 				cardList: [{

@@ -45,6 +45,16 @@ export default {
 			  label: 'Card',
 			  title: '卡片',
 			  url: '/example/pages/card/index'
+			},
+			{
+			  label: 'TextField',
+			  title: '单元格',
+			  url: '/example/pages/textField/index'
+			},
+			{
+			  label: 'Overlay',
+			  title: '遮罩层',
+			  url: '/example/pages/overlay/index'
 			}
 		  ]
 		},
