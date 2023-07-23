@@ -7,7 +7,7 @@ const path = require('path')
 // const TOOL_ID = process.env.TOOL_ID
 
 // 获取工作目录路径
-const workspacePath = process.env.GITHUB_WORKSPACE
+const workspacePath = process.env.GITHUB_WORKSPACE 
 
 // 构建产物路径
 const buildPath = path.join(workspacePath, 'dist/build/mp-alipay');
