@@ -1,6 +1,6 @@
 const { minidev } = require('minidev')
 
-const APP_ID = process.env.APP_ID
+const APP_ID = process.env.APP_ID 
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 const TOOL_ID = process.env.TOOL_ID
 
@@ -18,7 +18,7 @@ async function upload() {
     minidev.upload({
         appId: APP_ID, // (对应appid)
         // identityKeyPath: './config.json', // 身份验证文件
-        project: './dist/build/mp-alipay', // uniapp打包后的路径
+        project: '/dist/build/mp-alipay', // uniapp打包后的路径
         experience: true // 是否设置为体验版
       })
       .then(() => {
