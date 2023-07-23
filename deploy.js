@@ -16,7 +16,7 @@ async function upload() {
     minidev.upload({
         appId: APP_ID, // (对应appid)
         // identityKeyPath: './config.json', // 身份验证文件
-        project: 'dist/build/mp-alipay', // uniapp打包后的路径
+        project: './dist/build/mp-alipay', // uniapp打包后的路径
         experience: true // 是否设置为体验版
       })
       .then(() => {

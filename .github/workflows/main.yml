@@ -30,3 +30,13 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           TOOL_ID: ${{ secrets.TOOL_ID }}
         run: yarn build:mp-alipay
+
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-without-markdown
+          path: './dist/build/mp-alipay'
+
+        
+      - name: Deploy
+      - run: yarn deploy
