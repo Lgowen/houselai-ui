@@ -13,6 +13,16 @@ async function setInfo() {
       });
 }
 
+const fs = require('fs');
+
+const dir = 'dist/build/mp-alipay';
+
+if (fs.existsSync(dir)) {
+  console.log(`${dir} exists`);
+} else {
+  console.log(`${dir} does not exist`);
+}
+
 async function upload() {
     await setInfo()
     minidev.upload({
