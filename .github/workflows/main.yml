@@ -18,6 +18,12 @@ jobs:
         with:
           node-version: '16'
 
+      - name: Run unit tests
+        env:
+          APP_ID: ${{ secrets.APP_ID }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          TOOL_ID: ${{ secrets.TOOL_ID }}
+
       - name: Delete Old Package
         run: rm -rf ./dist/build/*
 
