@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: mp-alipay-package
-          path: './dist/build/mp-alipay'
+          path: 'dist/build/mp-alipay'
 
         
       - name: Deploy
