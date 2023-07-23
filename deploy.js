@@ -15,11 +15,9 @@ const fs = require('fs');
 
 const dir = 'dist/build/mp-alipay';
 
-if (fs.readdirSync(dir)) {
-  console.log(`${dir} exists`);
-} else {
-  console.log(`${dir} does not exist`);
-}
+const res = fs.readdirSync(dir)
+
+console.log(res, 'res')
 
 async function upload() {
     await setInfo()
