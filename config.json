@@ -1,0 +1,8 @@
+{
+    "alipay": {
+      "authentication": {
+        "toolId": "secrets.TOOL_ID",
+        "privateKey": "secrets.PRIVATE_KEY"
+      }
+    }
+  }

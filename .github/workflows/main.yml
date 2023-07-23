@@ -32,11 +32,12 @@ jobs:
         with:
           name: mp-alipay-package
           path: 'dist/build/mp-alipay'
-
         
       - name: Deploy
         env:
           APP_ID: ${{ secrets.APP_ID }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           TOOL_ID: ${{ secrets.TOOL_ID }}
-        run: yarn deploy
+        run: 
+          cat config.json | sed 's/secrets.TOOL_ID/'"${{ secrets.TOOL_ID }}"/g | sed 's/secrets.PRIVATE_KEY/'"${{ secrets.PRIVATE_KEY }}"/g > config.json
+          yarn deploy
