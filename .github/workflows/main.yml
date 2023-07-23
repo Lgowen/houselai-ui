@@ -29,4 +29,4 @@ jobs:
           APP_ID: ${{ secrets.APP_ID }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           TOOL_ID: ${{ secrets.TOOL_ID }}
-        run: yarn deploy
+        run: yarn build:mp-alipay
