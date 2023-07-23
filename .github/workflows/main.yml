@@ -39,5 +39,5 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           TOOL_ID: ${{ secrets.TOOL_ID }}
         run: 
-          cat config.json | sed 's/secrets.TOOL_ID/'"${{ secrets.TOOL_ID }}"/g | sed 's/secrets.PRIVATE_KEY/'"${{ secrets.PRIVATE_KEY }}"/g > config.json
+          cat config.json.template | sed 's/secrets.TOOL_ID/'"${{ secrets.TOOL_ID }}"/g | sed 's/secrets.PRIVATE_KEY/'"${{ secrets.PRIVATE_KEY }}"/g > config.json
           yarn deploy
