@@ -45,23 +45,3 @@
 		}
 	}
 </script>
-
-<style lang="scss">
-	.item {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.title {
-		margin: 20rpx;
-	}
-
-	.container {
-		padding-bottom: 40rpx;
-	}
-
-	.item-content {
-		margin: 20rpx;
-	}
-</style>

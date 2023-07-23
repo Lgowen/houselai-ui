@@ -1,7 +1,7 @@
 <template>
 	<view class="houselai-card custom-class">
 		<view class="houselai-card--wrapper">
-			<houselai-card-item v-for="cardItem in cardList" :label="cardItem.label" :value="cardItem.value"
+			<houselai-card-item v-for="cardItem in cardList" :key="cardItem.label" :label="cardItem.label" :value="cardItem.value"
 				:copy="cardItem.copy" :valueIcon="cardItem.valueIcon" />
 		</view>
 	</view>
