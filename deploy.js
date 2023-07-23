@@ -1,8 +1,8 @@
-const { minidev } = require('minidev')
+// const { minidev } = require('minidev')
 
-const APP_ID = process.env.APP_ID
-const PRIVATE_KEY = process.env.PRIVATE_KEY
-const TOOL_ID = process.env.TOOL_ID
+// const APP_ID = process.env.APP_ID
+// const PRIVATE_KEY = process.env.PRIVATE_KEY
+// const TOOL_ID = process.env.TOOL_ID
 
 console.log('process.env', process.env)
 // console.log('APP_ID', process.env, 'PRIVATE_KEY', PRIVATE_KEY, 'TOOL_ID1', TOOL_ID)
