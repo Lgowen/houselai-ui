@@ -4,6 +4,8 @@ const APP_ID = process.env.APP_ID
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 const TOOL_ID = process.env.TOOL_ID
 
+console.log('APP_ID', APP_ID, process.env)
+
 async function setInfo() {
     await minidev.config.useRuntime({
         'alipay.authentication.privateKey': PRIVATE_KEY,
