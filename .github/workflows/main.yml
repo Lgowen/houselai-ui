@@ -1,17 +1,25 @@
-image: node:lts-fermium
+name: Download Dependencies and Run Script
 
-  on:
+on:
   push:
-    branches:    
+    branches:
       - pre-publish
-    script:
-      - rm -rf ./dist/build/*
-      - yarn install --frozen-lockfile
-      - yarn build:mp-alipay
-    artifacts:
-      name: 'Houselai-ui-package'
-      paths:
-        - ./dist/build/*
-      expire_in: never
-      reports:
-        dotenv: build.env
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Delete Old Package
+        run: rm -rf ./dist/build/*
+
+      - name: Run Script
+        run: yarn build:mp-alipay
