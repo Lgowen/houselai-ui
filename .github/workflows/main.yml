@@ -1,0 +1,39 @@
+image: node:lts-fermium
+
+cache: &global_cache
+  paths:
+    - node_modules/
+  policy: pull-push
+
+stages:
+  - INSTALL
+  - BUNDLE
+
+install:
+  stage: INSTALL
+  cache:
+    <<: *global_cache
+    policy: pull-push
+  script:
+    - rm -rf ./dist/build/*
+    - yarn install --frozen-lockfile
+  only:
+    - pre-publish
+
+bundle:
+  stage: BUNDLE
+  cache:
+    <<: *global_cache
+    policy: pull-push
+  script:
+    - yarn build:mp-alipay
+
+  artifacts:
+    name: 'Houselai-ui-package'
+    paths:
+      - ./dist/build/*
+    expire_in: never
+    reports:
+      dotenv: build.env
+  only:
+    - pre-publish
