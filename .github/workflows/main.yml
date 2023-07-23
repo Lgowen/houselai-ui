@@ -25,10 +25,6 @@ jobs:
         run: rm -rf ./dist/build/*
 
       - name: Run unit tests && Run Script
-        env:
-          APP_ID: ${{ secrets.APP_ID }}
-          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          TOOL_ID: ${{ secrets.TOOL_ID }}
         run: yarn build:mp-alipay
 
       - name: Archive production artifacts
@@ -39,4 +35,8 @@ jobs:
 
         
       - name: Deploy
+        env:
+          APP_ID: ${{ secrets.APP_ID }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          TOOL_ID: ${{ secrets.TOOL_ID }}
         run: yarn deploy
