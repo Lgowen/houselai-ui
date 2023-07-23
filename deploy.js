@@ -12,7 +12,7 @@ const workspacePath = process.env.GITHUB_WORKSPACE;
 // 构建产物路径
 const buildPath = path.join(workspacePath, 'dist/build/mp-alipay');
 
-console.log(buildPath, 'buildPath')
+console.log(buildPath, 'buildPath1')
 
 async function setInfo() {
     await minidev.config.useRuntime({
