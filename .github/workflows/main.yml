@@ -1,21 +1,17 @@
 image: node:lts-fermium
 
-stages:
-  - BUNDLE
-
-bundle:
-  stage: BUNDLE
-  script:
-    - rm -rf ./dist/build/*
-    - yarn install --frozen-lockfile
-    - yarn build:mp-alipay
-
-  artifacts:
-    name: 'Houselai-ui-package'
-    paths:
-      - ./dist/build/*
-    expire_in: never
-    reports:
-      dotenv: build.env
-  only:
-    - pre-publish
+  on:
+  push:
+    branches:    
+      - pre-publish
+    script:
+      - rm -rf ./dist/build/*
+      - yarn install --frozen-lockfile
+      - yarn build:mp-alipay
+    artifacts:
+      name: 'Houselai-ui-package'
+      paths:
+        - ./dist/build/*
+      expire_in: never
+      reports:
+        dotenv: build.env
