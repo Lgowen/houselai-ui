@@ -13,8 +13,8 @@ const config = fs.readFileSync('./config.json', 'utf8');
 
 // 替换占位符
 const replacedConfig = config
-  .replace('secret.TOOL_ID', process.env.TOOL_ID)
-  .replace('secret.PRIVATE_KEY', process.env.PRIVATE_KEY);
+  .replace('secrets.TOOL_ID', process.env.TOOL_ID)
+  .replace('secrets.PRIVATE_KEY', process.env.PRIVATE_KEY);
 
 // 将替换后的内容写回到 JSON 文件 
 fs.writeFileSync('./config.json', replacedConfig, 'utf8');
