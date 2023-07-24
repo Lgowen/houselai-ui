@@ -8,7 +8,7 @@ on:
 
 env:
   APP_ID: ${{ secrets.APP_ID }}
-  PRIVATE_KEY: {{ secrets.PRIVATE_KEY}}
+  PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
   TOOL_ID: ${{ secrets.TOOL_ID }}
 
 jobs:
