@@ -33,7 +33,7 @@
 		},
 		methods: {
 			onClickOverlay() {
-				this.$emit('update:show', false)
+				this.$emit('close')
 			}
 		},
 		computed: {

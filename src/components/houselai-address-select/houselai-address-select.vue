@@ -1,8 +1,6 @@
 <template>
-	<block>
-		<houselai-overlay :overlay-appear="addressPopupAppear" @closeOverlay="closeOverlay" />
-		<houselai-popup :popup-appear="addressPopupAppear">
-			<view class="picker-view_title fs30 flex-end" @click="handleConfirm">
+		<houselai-popup :show="show" @close="handleClose">
+			<view class="picker-view_title flex-end" @click="handleConfirm">
 				确定
 			</view>
 			<view class="picker-view_container">
@@ -18,15 +16,14 @@
 					</picker-view-column>
 				</picker-view>
 			</view>
-		</Popup>
-	</block>
+		</houselai-popup>
 </template>
 
 <script>
 	export default {
 		name: 'AddressPopup',
 		props: {
-			addressPopupAppear: Boolean,
+			show: Boolean,
 			provinces: {
 				type: Array,
 				default: () => []
@@ -51,21 +48,11 @@
 		data() {
 			return {
 				ownValue: [0, 0, 0],
-				// ownAddress: {
-				// 	province: ADDRESS_MAP[2],
-				// 	city: ADDRESS_MAP[2],
-				// 	district: {
-				// 		area_id: 36,
-				// 		area_name: '东城区'
-				// 	}
-				// }
 			}
 		},
 		methods: {
-			closeOverlay() {
-				this.$emit('update:addressPopupAppear', false)
-				// this.ownValue = this.value
-				// console.log(this.ownValue, 'this.value')
+			handleClose() {
+				this.$emit('update:show', false)
 			},
 			handleChange(e) {
 				const { value } = e.detail
@@ -108,7 +95,7 @@
 				// 	// this.ownAddress = this.address
 				// }
 			},
-			addressPopupAppear(appear) {
+			show(appear) {
 				if (appear) {
 					this.ownValue = this.value
 				}
@@ -124,6 +111,11 @@
 		padding-top: 24rpx;
 		padding-right: 24rpx;
 		color: #576b95;
+		font-size: 30rpx;
+	}
+	.flex-end {
+		display: flex;
+		justify-content: flex-end;
 	}
 	.picker-view {
 		display: flex;

@@ -2,7 +2,12 @@
   <view class="demo">
     <view class="demo-item" v-for="(item, index) in list" :key="index">
       <view class="demo-title">{{ item.title }}</view>
-      <view class="demo-content" v-for="(item1, index1) in item.item" :key="index1" @click="clickItem(item1)">
+      <view
+        class="demo-content"
+        v-for="(item1, index1) in item.item"
+        :key="index1"
+        @click="clickItem(item1)"
+      >
         <view class="demo-content-left">
           <view class="demo-content-left-label">{{ item1.label }}</view>
           <view class="demo-content-left-title">{{ item1.title }}</view>
@@ -19,68 +24,71 @@ export default {
     return {
       list: [
         {
-          title: '基础组件',
+          title: "基础组件",
           item: [
             {
-              label: 'Button',
-              title: '按钮',
-              url: '/example/pages/button/index'
+              label: "Button",
+              title: "按钮",
+              url: "/example/pages/button/index",
             },
-			{
-			  label: 'SafeArea',
-			  title: '安全区域',
-			  url: '/example/pages/safeArea/index'
-			}
-          ]
+            {
+              label: "SafeArea",
+              title: "安全区域",
+              url: "/example/pages/safeArea/index",
+            },
+          ],
         },
-		{
-		  title: '业务组件',
-		  item: [
-		    {
-		      label: 'CardItem',
-		      title: '卡片项',
-		      url: '/example/pages/cardItem/index'
-		    },
-			{
-			  label: 'Card',
-			  title: '卡片',
-			  url: '/example/pages/card/index'
-			},
-			{
-			  label: 'TextField',
-			  title: '单元格',
-			  url: '/example/pages/textField/index'
-			},
-			{
-			  label: 'Overlay',
-			  title: '遮罩层',
-			  url: '/example/pages/overlay/index'
-			},
-			{
-			  label: 'Popup',
-			  title: '弹出层',
-			  url: '/example/pages/popup/index'
-			}
-		  ]
-		},
-		{
-		  title: '功能组件',
-		  item: []
-		},
-      ]
-    }
+        {
+          title: "业务组件",
+          item: [
+            {
+              label: "CardItem",
+              title: "卡片项",
+              url: "/example/pages/cardItem/index",
+            },
+            {
+              label: "Card",
+              title: "卡片",
+              url: "/example/pages/card/index",
+            },
+            {
+              label: "TextField",
+              title: "单元格",
+              url: "/example/pages/textField/index",
+            },
+            {
+              label: "Overlay",
+              title: "遮罩层",
+              url: "/example/pages/overlay/index",
+            },
+            {
+              label: "Popup",
+              title: "弹出层",
+              url: "/example/pages/popup/index",
+            },
+            {
+              label: "AddressSelect",
+              title: "地址选择",
+              url: "/example/pages/addressSelect/index",
+            },
+          ],
+        },
+        {
+          title: "功能组件",
+          item: [],
+        },
+      ],
+    };
   },
-  onLoad() {
-    
-  },
+  onLoad() {},
   methods: {
     clickItem(item) {
       uni.navigateTo({
-        url: item.url
-      })
-    }
-  }
-}
+        url: item.url,
+      });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

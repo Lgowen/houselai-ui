@@ -1,87 +1,92 @@
 {
 	"pages": [
-	  //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-	  {
-		"path": "pages/index/index",
-		"style": {
-		  "navigationBarTitleText": "houselai-ui"
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "houselai-ui"
+			}
 		}
-	  }
 	],
 	"globalStyle": {
-	  "navigationBarTitleText": "houselai-ui",
-	  "navigationBarBackgroundColor": "#FFFFFF",
-	  "backgroundColor": "#F8F8F8"
+		"navigationBarTitleText": "houselai-ui",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8"
 	},
-	"subPackages": [
-	  {
+	"subPackages": [{
 		"root": "example/pages",
-		"pages": [
-		  {
-			"path": "button/index",
-			"style": {
-			  "navigationBarTitleText": "button按钮",
-			  "h5": {
-				"titleNView": false
-			  }
+		"pages": [{
+				"path": "button/index",
+				"style": {
+					"navigationBarTitleText": "button按钮",
+					"h5": {
+						"titleNView": false
+					}
+				}
+			},
+			{
+				"path": "cardItem/index",
+				"style": {
+					"navigationBarTitleText": "cardItem",
+					"h5": {
+						"titleNView": false
+					}
+				}
+			},
+			{
+				"path": "card/index",
+				"style": {
+					"navigationBarTitleText": "card",
+					"h5": {
+						"titleNView": false
+					}
+				}
+			},
+			{
+				"path": "safeArea/index",
+				"style": {
+					"navigationBarTitleText": "safeArea",
+					"h5": {
+						"titleNView": false
+					}
+				}
+			},
+			{
+				"path": "textField/index",
+				"style": {
+					"navigationBarTitleText": "textField",
+					"h5": {
+						"titleNView": false
+					}
+				}
+			},
+			{
+				"path": "overlay/index",
+				"style": {
+					"navigationBarTitleText": "overlay",
+					"h5": {
+						"titleNView": false
+					}
+				}
+			},
+			{
+				"path": "popup/index",
+				"style": {
+					"navigationBarTitleText": "popup",
+					"h5": {
+						"titleNView": false
+					}
+				}
+			},
+			{
+				"path": "addressSelect/index",
+				"style": {
+					"navigationBarTitleText": "addressSelect",
+					"h5": {
+						"titleNView": false
+					}
+				}
 			}
-		  },
-		  {
-			"path": "cardItem/index",
-			"style": {
-			  "navigationBarTitleText": "cardItem",
-			  "h5": {
-				"titleNView": false
-			  }
-			}
-		  },
-		  {
-			"path": "card/index",
-			"style": {
-			  "navigationBarTitleText": "card",
-			  "h5": {
-				"titleNView": false
-			  }
-			}
-		  },
-		  {
-			"path": "safeArea/index",
-			"style": {
-			  "navigationBarTitleText": "safeArea",
-			  "h5": {
-				"titleNView": false
-			  }
-			}
-		  },
-		  {
-			"path": "textField/index",
-			"style": {
-			  "navigationBarTitleText": "textField",
-			  "h5": {
-				"titleNView": false
-			  }
-			}
-		  },
-		  {
-			"path": "overlay/index",
-			"style": {
-			  "navigationBarTitleText": "overlay",
-			  "h5": {
-				"titleNView": false
-			  }
-			}
-		  },
-		  {
-			"path": "popup/index",
-			"style": {
-			  "navigationBarTitleText": "popup",
-			  "h5": {
-				"titleNView": false
-			  }
-			}
-		  }
 		]
-	  }
-	]
-  }
-  
+	}]
+}
