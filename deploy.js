@@ -35,7 +35,7 @@ const buildPath = path.join(workspacePath, 'dist/build/mp-alipay');
 // }
 
 async function upload() {
-    await setInfo()
+    // await setInfo()
     minidev.upload({
         appId: APP_ID, // (对应appid)
         identityKeyPath: './config.json', // 身份验证文件
