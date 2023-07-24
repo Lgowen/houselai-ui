@@ -16,7 +16,7 @@ const replacedConfig = config
   .replace('secret.TOOL_ID', process.env.TOOL_ID)
   .replace('secret.PRIVATE_KEY', process.env.PRIVATE_KEY);
 
-// 将替换后的内容写回到 JSON 文件
+// 将替换后的内容写回到 JSON 文件 
 fs.writeFileSync('./config.json', replacedConfig, 'utf8');
 
 // 获取工作目录路径
