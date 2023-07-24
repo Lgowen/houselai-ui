@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - pre-publish
+      - test-auto-upload
 
 jobs:
   build:
@@ -26,18 +27,10 @@ jobs:
 
       - name: Run unit tests && Run Script
         run: yarn build:mp-alipay
-
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: mp-alipay-package
-          path: 'dist/build/mp-alipay'
         
       - name: Deploy
         env:
           APP_ID: ${{ secrets.APP_ID }}
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           TOOL_ID: ${{ secrets.TOOL_ID }}
-        run: 
-          cat config.json.template | sed 's/secrets.TOOL_ID/'"${{ secrets.TOOL_ID }}"/g | sed 's/secrets.PRIVATE_KEY/'"${{ secrets.PRIVATE_KEY }}"/g > config.json
-          yarn deploy
+        run: yarn deploy
