@@ -1,7 +1,7 @@
 <template>
 	<houselai-safe-area>
 		<demo-block title="基础用法">
-			<houselai-button @click="this.popup = true" size="middle">底部弹出</houselai-button>
+			<houselai-button @click="openPopup" size="middle">底部弹出</houselai-button>
 			<houselai-popup :show.sync="popup">
 				<view class="content-wrapper">
 					<view class="content">
@@ -21,8 +21,12 @@
 		},
 		data() {
 			return {
-				overlay: false,
 				popup: false
+			}
+		},
+		methods: {
+			openPopup() {
+				this.popup = true
 			}
 		}
 	}

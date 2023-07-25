@@ -31,6 +31,10 @@
 				default: 'normal'
 			},
 			icon: String,
+			disabled: {
+				type: Boolean,
+				default: false
+			}
 		},
 		computed: {
 			// 按钮类型

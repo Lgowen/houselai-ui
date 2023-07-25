@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
+    "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
     "build:mp-alipay": "cross-env NODE_ENV=production UNI_PLATFORM=mp-alipay vue-cli-service uni-build",
     "build:mp-weixin": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build",
     "dev:h5": "cross-env NODE_ENV=development UNI_PLATFORM=h5 vue-cli-service uni-serve",
@@ -21,7 +22,7 @@
     "@dcloudio/uni-mp-weixin": "^2.0.2-3080720230703001",
     "@dcloudio/uni-stat": "^2.0.2-3080720230703001",
     "@vue/shared": "^3.0.0",
-    "core-js": "^3.8.3",
+    "core-js": "^3.8.3",  
     "flyio": "^0.6.2",
     "vue": ">= 2.6.14 < 2.7",
     "vuex": "^3.2.0"

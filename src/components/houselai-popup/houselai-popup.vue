@@ -1,11 +1,11 @@
 <template>
-	<block>
+	<view>
 		<houselai-overlay :show="show" @click="onClickOverlay"/>
 		<view class="houselai-popup popup-leave-to houselai-popup--bottom houselai-popup--round popup-enter-active"
 			:style="{ zIndex }" :class="{ 'popup-enter-to': show, 'popup-leave-active': show, 'houselai--safe-area-inset-bottom': safeArea }">
 			<slot></slot>
 		</view>
-	</block>
+	</view>
 </template>
 
 <script>
