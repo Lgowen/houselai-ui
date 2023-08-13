@@ -71,6 +71,11 @@ export default {
               title: "地址选择",
               url: "/example/pages/addressSelect/index",
             },
+            {
+              label: "PageModal",
+              title: "页面弹窗",
+              url: "/example/pages/pageModal/index",
+            }
           ],
         },
         {

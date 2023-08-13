@@ -86,6 +86,15 @@
 						"titleNView": false
 					}
 				}
+			},
+			{
+				"path": "pageModal/index",
+				"style": {
+					"navigationBarTitleText": "pageModal",
+					"h5": {
+						"titleNView": false
+					}
+				}
 			}
 		]
 	}]
