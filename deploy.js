@@ -12,7 +12,6 @@ const workspacePath = process.env.GITHUB_WORKSPACE
 
 // 构建产物路径
 const buildPath = path.join(workspacePath, 'dist/build/mp-alipay');
-const fs = require('fs');
 
 function replacePravateInfo() {
   // 读取 JSON 文件
