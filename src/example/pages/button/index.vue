@@ -9,6 +9,7 @@
 			<view class="row flex-between-center">
 				<houselai-button type="confirm">确认按钮</houselai-button>
 				<houselai-button type="danger">危险按钮</houselai-button>
+				<houselai-button type="delivery">配送按钮</houselai-button>
 			</view>
 		</demo-block>
 

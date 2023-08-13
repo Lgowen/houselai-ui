@@ -102,6 +102,11 @@
 			border: 1px solid $primary;
 			color: $primary
 		}
+
+		&--delivery {
+			border: 1px solid $delivery;
+		    color: $delivery;
+		}
 		
 		&--danger {
 			background-color: #F63720;
