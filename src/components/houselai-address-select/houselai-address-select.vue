@@ -91,7 +91,6 @@ export default {
       } else {
         this.ownValue = [provinceIndex, cityIndex, -1];
       }
-	  console.log(confirmArea, 'confirmAreaconfirmAreaconfirmAreaconfirmArea')
       this.$emit("confirm", { value: this.ownValue, confirmArea });
     },
   },

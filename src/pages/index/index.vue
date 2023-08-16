@@ -75,6 +75,11 @@ export default {
               label: "PageModal",
               title: "页面弹窗",
               url: "/example/pages/pageModal/index",
+            },
+            {
+              label: "CouponModal",
+              title: "优惠券弹窗",
+              url: "/example/pages/couponModal/index",
             }
           ],
         },

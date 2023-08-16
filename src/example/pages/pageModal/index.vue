@@ -1,7 +1,6 @@
 <template>
    <view class="page">
     <houselai-page-modal
-      v-if="pageModal"
       :show="pageModal"
       :main-img="mainImg"
       @handleClick="clickPageModal"
@@ -37,7 +36,7 @@ export default {
 </script>
 
 
-<<style lang="scss">
+<<style scope lang="scss">
     .page {
         width: 100vw;
         height: 100vh;

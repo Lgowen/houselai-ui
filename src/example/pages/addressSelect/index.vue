@@ -2,7 +2,6 @@
   <houselai-safe-area>
     <demo-block title="基础使用">
       <houselai-button @click="openAddressSelect">选择省市区</houselai-button>
-	  {{ confirmValue }}
     </demo-block>
     <houselai-address-select :show.sync="isShow" :value="value" :provinces="provinces" :cities="cities" :districts="districts" @confirm="handleConfirm"/>
   </houselai-safe-area>
@@ -10,6 +9,7 @@
 
 <script>
 import demoBlock from "../../components/demo-block.vue";
+import { showToast } from "../../../utils/common.js"
 export default {
   components: {
     demoBlock,
@@ -81,9 +81,11 @@ export default {
 	},
 	handleConfirm(confirmValue) {
 		const { value, confirmArea } = confirmValue
-		console.log(value, confirmArea)
 		this.value = value
 		this.confirmValue = confirmArea.map(item => item.area_name).join(' ')
+    showToast({
+      title: `选择的地址为:${this.confirmValue}`
+    })
 		this.isShow = false
 	}
   }
