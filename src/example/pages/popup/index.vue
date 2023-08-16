@@ -2,7 +2,7 @@
 	<houselai-safe-area>
 		<demo-block title="基础用法">
 			<houselai-button @click="openPopup" size="middle">底部弹出</houselai-button>
-			<houselai-popup :show.sync="popup">
+			<houselai-popup :show.sync="popup" @clickOverlay="clickOverlay">
 				<view class="content-wrapper">
 					<view class="content">
 						我是弹出的内容
@@ -27,6 +27,12 @@
 		methods: {
 			openPopup() {
 				this.popup = true
+			},
+			clickOverlay() {
+				uni.showToast({
+					title: '点击了朦层',
+					duration: 1000
+				});
 			}
 		}
 	}
