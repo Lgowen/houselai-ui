@@ -1,16 +1,15 @@
 <template>
-  <view>
-    <houselai-overlay :show="show" />
-    <view v-if="show" class="modal-r">
+  <houselai-overlay :show="show">
+    <view class="modal-r">
       <view class="modal-r-content" :style="{ background: modalBackground }">
         <image class="modal-r-t" :src="titleImg"> </image>
         <view class="modal-r-desc"
-          >送你{{ computePrice(followAmount) }}元专属优惠券
+          >送你{{ parseFloat(followAmount) }}元专属优惠券
         </view>
         <scroll-view
           v-if="lifeCouponList.length !== 0"
           :scroll-y="true"
-          class="coupon_list fs26"
+          class="coupon_list"
         >
           <view
             class="modal-thq-bg follow"
@@ -18,11 +17,11 @@
             v-for="(item, index) in lifeCouponList"
             :key="item.activity_id"
           >
-            <view class="flex-column-center-center" style="width: 146rpx; height: 130rpx">
+            <view class="coupon-left_container" style="width: 146rpx; height: 130rpx">
               <view class="coupon-left">
                 <text class="unit">¥</text>
                 <text class="coupon-price">
-                  {{ computePrice(item.voucher_amount) }}
+                  {{ parseFloat(item.voucher_amount) }}
                 </text>
               </view>
               <view class="coupon-type">
@@ -31,7 +30,7 @@
             </view>
             <view style="margin-left: 30rpx">
               <view class="coupon-title"
-                >满{{ computePrice(item.floor_amount) }}可使用
+                >满{{ parseFloat(item.floor_amount) }}可使用
               </view>
               <view class="coupon-desc"
                 >仅限{{ useRange(item.activity_name, 8) }}使用</view
@@ -50,7 +49,7 @@
         <image class="modal-close" @click="handleClose" :src="closeImg"> </image>
       </view>
     </view>
-  </view>
+  </houselai-overlay>
 </template>
 
 <script>
@@ -83,8 +82,6 @@ export default {
       default:
         "https://env-00jx4160lavv.normal.cloudstatic.cn/flower-mall/20230619-64900654a44aa.webp",
     },
-    // background: linear-gradient(180deg, #fef9f6 0%, #fdf1ee 100%);
-    // background: linear-gradient(180deg, #f3fdce 0%, #fdf1ee 100%);
   },
   data() {
     return {
@@ -163,7 +160,7 @@ export default {
 
 .modal-content {
   position: relative;
-  display: flex;
+  @include flex;
 }
 
 .modal-img {
@@ -198,20 +195,14 @@ export default {
   width: 100vw;
   height: 100vh;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-column-center-center;
   z-index: 1000;
 }
 
 .modal-r-content {
   width: 590rpx;
   border-radius: 38rpx;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-column-center-center;
   padding-bottom: 29rpx;
 }
 
@@ -231,6 +222,7 @@ export default {
 .coupon_list {
   max-height: 418rpx;
   margin-top: 24rpx;
+  font-size: 26rpx;
 }
 
 .modal-thq-bg {
@@ -292,6 +284,10 @@ export default {
   font-weight: 400;
   font-size: 18rpx;
   line-height: 30rpx;
+}
+
+.coupon-left_container {
+  @include flex-column-center-center;
 }
 
 .coupon-left {

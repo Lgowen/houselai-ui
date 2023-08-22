@@ -14,7 +14,7 @@ export default {
     data() {
         return {
             pageModal: true,
-            mainImg: 'https://env-00jx4160lavv.normal.cloudstatic.cn/flower-mall/20230619-64900654a44aa.webp'
+            mainImg: 'https://env-00jx4160lavv.normal.cloudstatic.cn/flower-mall/20230816-64dc8f39c118b.webp'
         }
     },
     methods: {
@@ -40,6 +40,6 @@ export default {
     .page {
         width: 100vw;
         height: 100vh;
-        background-color: $primary;
+        background-color: #FFF;
     }
 </style>
