@@ -23,6 +23,10 @@
 			safeArea: {
 				type: Boolean,
 				default: true
+			},
+			closeOnClickOverlay: {
+				type: Boolean,
+				default: true
 			}
 		},
 		data() {
@@ -33,7 +37,10 @@
 		},
 		methods: {
 			onClickOverlay() {
-				this.$emit('close')
+				if (this.closeOnClickOverlay) {
+					this.$emit('update:show', false)
+				}
+				this.$emit('clickOverlay')
 			}
 		},
 		computed: {
