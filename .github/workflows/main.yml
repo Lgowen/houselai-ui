@@ -25,6 +25,7 @@ jobs:
           node-version: '16'
 
       - name: Cache dependencies
+        id: cache-node-modules
         uses: actions/cache@v2
         with:
           path: node_modules
@@ -33,7 +34,7 @@ jobs:
             ${{ runner.os }}-yarn-
       
       - name: Install
-        if: steps.cache.outputs.cache-hit != 'true'
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
 
       - name: Delete Old Package
